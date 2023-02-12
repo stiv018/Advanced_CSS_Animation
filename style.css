@@ -1,0 +1,67 @@
+body {
+    background-color: #050210;
+}
+html,body {
+    height: 100%;
+}
+.circle {
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    position: relative;
+}
+.rotate{
+    border-radius: 50%;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff );
+    animation: rotation 1s infinite linear;
+    width: 300px;
+    height: 300px;
+}
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+.circle1 {
+    background-color: #050210 ;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: absolute;
+}
+.glow {
+    border-radius: 50%;
+    position: absolute;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff );
+    animation: rotation 1s infinite linear;
+    width: 400px;
+    height: 400px;
+    opacity: 30%;
+    filter: blur(20px);
+}
+.shadow {
+    animation-name: shadow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    background-color: #050210;
+    filter: blur(20px);
+    filter: brightness(2);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: absolute;
+}
+@keyframes shadow {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        width: 250px;
+        height: 250px;
+    }
+}
